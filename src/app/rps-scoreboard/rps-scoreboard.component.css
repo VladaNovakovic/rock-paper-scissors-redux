@@ -1,0 +1,11 @@
+.rps-c-scoreboard {
+    text-align: center;
+}
+
+.rps-c-scoreboard table {
+    margin: auto;
+}
+
+.rps-c-scoreboard table tr td {
+    padding: 0 20px;
+}

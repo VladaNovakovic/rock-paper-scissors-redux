@@ -1,3 +1,24 @@
-<h1>
-  {{title}}
-</h1>
+<div class="rps-c-game">
+    <p>Game Works!</p>
+    <button (click)="startNewGame()">Start new game</button>
+    <app-rps-scoreboard></app-rps-scoreboard>
+
+    <table>
+        <tr>
+            <td>
+                <app-rps-usercontrols [player]="game.playerOne"></app-rps-usercontrols>
+            </td>
+            <td>
+                <app-rps-computer-player
+                        [computerPlayer]="game.playerTwo"
+                        (selected)="game.calculateResult()"
+                        [isLoopRunning]="game.ongoingRound"></app-rps-computer-player>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button (click)="startLoop()">Start round</button>
+            </td>
+        </tr>
+    </table>
+</div>
